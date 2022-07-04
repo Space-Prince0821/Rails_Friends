@@ -1,0 +1,13 @@
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @friend.first_name %> <%= @friend.last_name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @friend.email %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @friend.phone %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @friend.twitter %></h6>
+    <br/>
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-dark" %> 
+    <%= link_to "Back to friends", friends_path, class: "btn btn-dark" %>
+
+    <%= button_to "Destroy this friend", @friend, method: :delete, class: "btn btn-danger mt-2" %>
+  </div>
+</div>
